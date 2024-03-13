@@ -1,3 +1,8 @@
+# Link to main repository for section 11:
+https://github.com/dermotbg/fullstackopen11-pokedex
+
+
+
 # create-app
 Simple boilerplate
 
