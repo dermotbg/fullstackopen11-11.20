@@ -3,6 +3,6 @@
 echo "Build Script"
 
 npm install 
-npm build
+npm run build
 
 echo "packages installed and build completed"
