@@ -2,8 +2,12 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
+  "plugins": [
+    "react", "jest", "cypress"
+  ],
   "rules": {
     "semi": [
       "error",

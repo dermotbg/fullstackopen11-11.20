@@ -11,12 +11,12 @@ const message = 'The first message'
 describe('Message Form', () => {
   it('submits a message with valid data', () => {
     render(
-      <MessageForm postMessage={postMessage}/>
-      )
+      <MessageForm postMessage={postMessage} />,
+    )
     const user = userEvent.setup()
     user.type(screen.getByRole('textbox'), message)
     user.click(screen.getByRole('button'))
-    waitFor( () => {
+    waitFor(() => {
       expect(handleSubmit).toBeCalled()
     })
   })

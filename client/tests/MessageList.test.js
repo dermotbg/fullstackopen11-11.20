@@ -1,11 +1,15 @@
 import React from 'react'
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import {
+  render,
+  screen,
+  fireEvent,
+} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import MessageList from '../components/MessageView/MessageList'
 
 const messages = [
-  {id: 1, body: 'The first message'},
-  {id: 2, body: 'The second message'}
+  { id: 1, body: 'The first message' },
+  { id: 2, body: 'The second message' },
 ]
 
 const deleteMessage = jest.fn()
@@ -13,7 +17,7 @@ const deleteMessage = jest.fn()
 describe('Message List', () => {
   it('Displays messages & fires deleteMessage', () => {
     render(
-      <MessageList messages={messages} deleteMessage={deleteMessage} />
+      <MessageList messages={messages} deleteMessage={deleteMessage} />,
     )
     expect(screen.getByText('The first message')).toBeVisible()
     expect(screen.getByText('The second message')).toBeVisible()
